@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.Iterator;
 import java.util.SortedSet;
+import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 import org.json.JSONArray;
@@ -187,7 +188,7 @@ public class JsonHiveSchema  {
     Iterator<String> it;
     
     public OrderedIterator(Iterator<String> iter) {
-      SortedSet<String> keys = new TreeSet<String>();
+      LinkedHashSet<String> keys = new LinkedHashSet<String>();
       while (iter.hasNext()) {
         keys.add(iter.next());
       }
